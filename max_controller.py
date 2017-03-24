@@ -2,7 +2,7 @@ import json
 from flask import Flask, render_template, request, Response
 app = Flask(__name__)
 
-speed = 10
+value = 10
 
 @app.route('/')
 def index():
@@ -12,28 +12,21 @@ def index():
     return render_template('controller.html')
 
 
-@app.route('/speed')
-def get_speed():
-    print request.form
+@app.route('/value')
+def get_value():
+    global value
+    return str(value)
 
-    results = {}
-    results["speed"] = speed
-
-    results_json = json.dumps(results)
-    print results_json
-
-    return Response(results_json, status=200, mimetype='application/json')
-
-@app.route('/faster')
-def faster():
-    global speed
-    speed += 1
-    print speed
+@app.route('/increment')
+def increment():
+    global value
+    value += 1
+    print value
     return ""
 
-@app.route('/slower')
-def slower():
-    global speed
-    speed -= 1
-    print speed
+@app.route('/decrement')
+def decrement():
+    global value
+    value -= 1
+    print value
     return ""

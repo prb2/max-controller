@@ -1,11 +1,8 @@
 
-
-function faster() {
-    console.log("faster");
-    $.get("/faster")
+function increment() {
+    $.get("/increment")
 }
 
-function slower() {
-    console.log("slower");
-    $.get("/slower")
+function decrement() {
+    $.get("/decrement")
 }
