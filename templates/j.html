@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <title></title>
+
+        <!--jQuery-->
+        <script src="static/scripts/jquery-latest.min.js"></script>
+
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="static/styles/bootstrap.min.css">
+        <script src="static/scripts/bootstrap.min.js"></script>
+
+        <!--Custom JavaScript-->
+        <script src="static/scripts/controller.js"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <br><br>
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <h1>Max Controller - John</h1>
+                    <hr style="border-top:4px solid #eee">
+
+                    <br><br>
+                    <label>Slider 1: 0 to 127</label>
+                    <input type="range" min="0" max="127" id="slider1" onchange="slider1('j')">
+
+                    <br>
+
+                    <label>Slider 2: -63 to 64</label>
+                    <input type="range" min="-63" max="64" id="slider2" onchange="slider2('j')">
+
+                    <br>
+
+                    <label>Slider 3: 20 to 20,000</label>
+                    <input type="range" min="20" max="20000" id="slider3" onchange="slider3('j')">
+                    <br><br>
+
+                    <button class="btn btn-block btn-success" onclick="increment('j')"><br><h3>Increment</h3><br></button>
+                    <button class="btn btn-block btn-warning" onclick="decrement('j')"><br><h3>Decrement</h3><br></button>
+                    <br>
+                    <button class="btn btn-block btn-primary" onclick="randomFloat('j')"><br><h3>Random (0.0 to 1.0)</h3><br></button>
+                    <button class="btn btn-block btn-primary" onclick="randomInt('j')"><br><h3>Random (0 to 99)</h3><br></button>
+
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
