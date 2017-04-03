@@ -117,3 +117,28 @@ reset("p")
 reset("s")
 
 
+
+
+
+# Skyspace
+
+@app.route('/test', methods=["POST"])
+def test():
+    print(request.data)
+    return ""
+
+@app.route('/skyspace/set/<mode>')
+def set_mode(mode):
+    global skyspace_mode
+
+    skyspace_mode = mode
+
+    return ""
+
+@app.route('/skyspace/mode')
+def get_mode():
+    global skyspace_mode
+
+    return skyspace_mode
+
+skyspace_mode = ""
